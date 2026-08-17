@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment | Reshav Ji House</title>
+  <meta name="description" content="Book a computer and laptop consultation with Reshav Ji House. Windows installation, troubleshooting, networking, cybersecurity and technical support." />
+  <style>
+    :root{
+      --red:#e50914;
+      --red-dark:#b80710;
+      --black:#0b0d10;
+      --white:#ffffff;
+      --gray:#f4f5f7;
+      --text:#17191d;
+      --muted:#6b7078;
+      --border:#e2e5e9;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#090b0e 0 390px,#f4f5f7 390px 100%);
+    }
+    .container{width:min(1100px,92%);margin:auto}
+    header{padding:28px 0 70px;color:white}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
+    .mark{width:46px;height:46px;border:2px solid var(--red);border-radius:50%;display:grid;place-items:center;font-weight:900;color:white}
+    .nav a{color:#fff;text-decoration:none;opacity:.9}
+    .hero{max-width:760px;margin-top:60px}
+    .eyebrow{color:#ff4a52;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:12px 0 18px}
+    .hero p{font-size:18px;line-height:1.7;color:#c9cdd3;max-width:680px}
+    .badge{display:inline-block;margin-top:16px;padding:9px 14px;border:1px solid #343941;border-radius:999px;color:#fff;font-size:13px}
+    main{padding:0 0 70px}
+    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;margin-top:-25px}
+    .card{background:#fff;border-radius:22px;box-shadow:0 20px 55px rgba(0,0,0,.12);padding:30px}
+    h2{margin:0 0 8px;font-size:28px}
+    .sub{color:var(--muted);margin:0 0 24px;line-height:1.6}
+    label{display:block;font-weight:700;font-size:14px;margin:16px 0 7px}
+    input,select,textarea{
+      width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;
+      font:inherit;background:#fff;outline:none;
+    }
+    input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(229,9,20,.09)}
+    textarea{min-height:95px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    button{
+      width:100%;margin-top:22px;border:0;border-radius:13px;padding:15px 18px;
+      background:var(--red);color:#fff;font-size:16px;font-weight:800;cursor:pointer;
+    }
+    button:hover{background:var(--red-dark)}
+    .note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}
+    .service-list{display:grid;gap:12px;margin-top:22px}
+    .service{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--border);border-radius:14px}
+    .icon{width:32px;height:32px;border-radius:9px;background:#fff0f1;color:var(--red);display:grid;place-items:center;font-weight:900;flex:none}
+    .service strong{display:block;margin-bottom:3px}
+    .service span{font-size:13px;color:var(--muted);line-height:1.4}
+    .contact{margin-top:25px;padding-top:22px;border-top:1px solid var(--border);display:grid;gap:10px}
+    .contact a{color:var(--text);text-decoration:none;font-weight:700}
+    footer{padding:25px 0 40px;text-align:center;color:#70757d;font-size:13px}
+    footer a{color:#70757d}
+    @media(max-width:800px){
+      body{background:linear-gradient(180deg,#090b0e 0 420px,#f4f5f7 420px 100%)}
+      .grid{grid-template-columns:1fr;margin-top:-15px}
+      header{padding-bottom:50px}
+      .hero{margin-top:45px}
+    }
+    @media(max-width:520px){.row{grid-template-columns:1fr}.card{padding:22px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand"><div class="mark">RJ</div><span>RESHAV JI HOUSE</span></div>
+      <a href="tel:+919837758354">Call us</a>
+    </div>
+    <section class="hero">
+      <div class="eyebrow">Computer Consultant</div>
+      <h1>Professional computer & laptop support.</h1>
+      <p>Book an appointment for Windows installation, troubleshooting, software setup, networking, malware removal, data support and cybersecurity consultation.</p>
+      <div class="badge">Appointment required • Fast & reliable support</div>
+    </section>
+  </div>
+</header>
+
+<main>
+  <div class="container grid">
+    <section class="card">
+      <h2>Book an appointment</h2>
+      <p class="sub">Choose a service and preferred time. Your request will open WhatsApp with the appointment details ready to send.</p>
+
+      <form id="bookingForm">
+        <label for="name">Your name</label>
+        <input id="name" required placeholder="Enter your name" />
+
+        <label for="phone">Phone number</label>
+        <input id="phone" type="tel" required placeholder="Enter your phone number" />
+
+        <label for="service">Service</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option>Computer / Laptop Troubleshooting</option>
+          <option>Windows Installation / Reinstallation</option>
+          <option>Computer Formatting</option>
+          <option>Software Installation & Updates</option>
+          <option>Driver Installation</option>
+          <option>Virus / Malware Removal</option>
+          <option>Computer Speed Optimization</option>
+          <option>Wi-Fi / Network Setup</option>
+          <option>Printer Setup</option>
+          <option>Data Backup / Recovery Support</option>
+          <option>Hardware Troubleshooting</option>
+          <option>Cybersecurity Consultation</option>
+          <option>Ethical Hacking Consultation</option>
+          <option>Remote Computer Support</option>
+          <option>Other</option>
+        </select>
+
+        <div class="row">
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" type="date" required />
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" type="time" required />
+          </div>
+        </div>
+
+        <label for="details">Problem / requirements</label>
+        <textarea id="details" placeholder="Briefly describe what you need help with"></textarea>
+
+        <button type="submit">Request Appointment on WhatsApp</button>
+        <div class="note">Submitting this form does not automatically confirm the appointment. Your appointment is confirmed after we respond.</div>
+      </form>
+    </section>
+
+    <aside class="card">
+      <h2>Our services</h2>
+      <p class="sub">Technical support for home users and small businesses.</p>
+
+      <div class="service-list">
+        <div class="service"><div class="icon">01</div><div><strong>Computer & Laptop</strong><span>Diagnosis, troubleshooting, formatting and performance optimization.</span></div></div>
+        <div class="service"><div class="icon">02</div><div><strong>Windows & Software</strong><span>Installation, reinstallation, updates and driver setup.</span></div></div>
+        <div class="service"><div class="icon">03</div><div><strong>Security</strong><span>Virus and malware removal plus cybersecurity consultation.</span></div></div>
+        <div class="service"><div class="icon">04</div><div><strong>Network & Printer</strong><span>Wi-Fi, router, printer and network troubleshooting.</span></div></div>
+        <div class="service"><div class="icon">05</div><div><strong>Data Support</strong><span>Backup assistance and data recovery support.</span></div></div>
+      </div>
+
+      <div class="contact">
+        <div>📞 <a href="tel:+919837758354">098377 58354</a></div>
+        <div>🌐 <a href="https://rjitech.blogspot.com/" target="_blank" rel="noopener">rjitech.blogspot.com</a></div>
+        <div>📍 Kawabuddinpur Harbans, Uttar Pradesh 246761</div>
+        <div>🕒 By appointment</div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  © <span id="year"></span> Reshav Ji House • Computer Consultant
+</footer>
+
+<script>
+  const form = document.getElementById("bookingForm");
+  const dateInput = document.getElementById("date");
+  const today = new Date();
+  const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
+  dateInput.min = localToday;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const details = document.getElementById("details").value.trim() || "Not provided";
+
+    const message =
+`Hello Reshav Ji House,
+
+I would like to request a computer consultation appointment.
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Preferred date: ${date}
+Preferred time: ${time}
+Problem / requirements: ${details}
+
+Please confirm availability. Thank you.`;
+
+    window.open("https://wa.me/919837758354?text=" + encodeURIComponent(message), "_blank");
+  });
+</script>
+</body>
+</html>
